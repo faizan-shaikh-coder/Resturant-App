@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import Navbar from "../components/Nav";
 
 const Seafood = () => {
   const [meals, setMeals] = useState([]);
@@ -22,8 +24,11 @@ const Seafood = () => {
   }
 
   return (
+    <>
+    <Navbar/>
+    
     <div className="px-6 py-10">
-      <h1 className="text-3xl font-bold text-center mb-8">Seafood Menu</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-red-500">Seafood Menu</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {meals.map((meal) => (
           <div
@@ -38,13 +43,17 @@ const Seafood = () => {
             <h2 className="text-lg font-semibold text-gray-800 text-center mb-3">
               {meal.strMeal}
             </h2>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-              View Details
+            <button className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+              Add
             </button>
           </div>
         ))}
       </div>
     </div>
+
+    <Footer/>
+
+    </>
   );
 };
 

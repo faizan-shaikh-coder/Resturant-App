@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../components/Nav";
+import Footer from "../components/Footer";
 
 const Vegetarian = () => {
   const [meals, setMeals] = useState([]);
@@ -21,9 +23,13 @@ const Vegetarian = () => {
     return <p className="text-center text-lg font-semibold mt-10">Loading...</p>;
   }
 
+  
+
   return (
+    <>
+    <Navbar/>
     <div className="px-6 py-10">
-      <h1 className="text-3xl font-bold text-center mb-8">Vegetarian Menu</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-green-500">Vegetarian Menu</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {meals.map((meal) => (
           <div
@@ -39,12 +45,14 @@ const Vegetarian = () => {
               {meal.strMeal}
             </h2>
             <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-              View Details
+              Add
             </button>
           </div>
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -1,25 +1,41 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-     <section className='bg-green-50 py-20'>
+    <section
+      className="relative bg-cover bg-center bg-no-repeat py-32"
+      style={{ backgroundImage: "url('/healthy food.jpeg')", objectFit: "cover" }}
+    >
 
-    <div className='container mx-auto flex flex-col md:flex items-center'>
-      <div className='md:w-1/2'>
-      <h2 className='text-4xl font-bold mb-4'>Best Catering Website</h2>
-      <p className='mb-6 text-gray-600'>Healty meals made fresh daily.Catering at events, food that fits you lifestyle.</p>
+      <div className="absolute inset-0 bg-black/40"></div>
 
-      <button className='bg-green-600 text-white px-6 py-3 rounded-lg mr-4'>Find Out More..</button>
-      <button className='border-1 border-x-green-600 px-6 py-3 rounded-lg text-green-600'>Open Menu</button>
+      <div className="relative container mx-auto flex flex-col items-center md:items-start text-center md:text-left px-6">
+        <div className="md:w-1/2 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Best Catering Website
+          </h2>
+          <p className="mb-6 text-lg">
+            Healthy meals made fresh daily. Catering at events, food that fits
+            your lifestyle.
+          </p>
+
+          <Link to="/product">
+            <button className="bg-green-600 text-white px-6 py-3 rounded-lg mr-4 hover:bg-green-700 transition">
+              Find Out More..
+            </button>
+
+          </Link>
+
+          <Link to="/menu">
+            <button className="border border-green-600 px-6 py-3 rounded-lg text-green-600 bg-white hover:bg-gray-100 transition">
+              Open Menu
+            </button>
+          </Link>
+        </div>
       </div>
+    </section>
+  );
+};
 
-      <div className='md:w-1/2'>
-      <img src="https://source.unsplash.com/600x400/?healthy-food" alt="Food" className="rounded-xl shadow-lg" />
-      </div>
-    </div>
-
-   </section>
-  )
-}
-
-export default Hero
+export default Hero;

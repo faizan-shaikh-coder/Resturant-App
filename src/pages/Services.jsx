@@ -1,4 +1,6 @@
 import React from 'react'
+import Navbar from '../components/Nav';
+import Footer from '../components/Footer';
 
 const Services = () => {
   const Services = [
@@ -23,9 +25,10 @@ const Services = () => {
 
   return (
     <>
+    <Navbar/>
       <section className='bg-white py-20'>
         <div className='container mx-auto px-6 md:px-12 lg:px-20'>
-          <h2 className='text-3xl font-bold text-center mb-10'>Our Services</h2>
+          <h2 className='text-3xl font-bold text-center mb-10 text-green-500'>Our Services</h2>
           <div className='grid md:grid-cols-3 gap-8'>
 
             {Services.map((services, index)=>(
@@ -49,6 +52,7 @@ const Services = () => {
         </div>
 
       </section>
+      <Footer/>
     </>
   )
 }

@@ -23,7 +23,7 @@ export default function Feedback() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-10">What Our Customers Say</h2>
+        <h2 className="text-3xl font-bold mb-10 text-green-500">What Our Customers Say</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
             <div

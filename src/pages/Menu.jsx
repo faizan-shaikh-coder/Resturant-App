@@ -1,3 +1,6 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Nav";
+
 export default function Menu() {
   const categories = [
     {
@@ -18,9 +21,11 @@ export default function Menu() {
   ];
 
   return (
+    <>
+    <Navbar/>
     <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-12">Our Menu Categories</h2>
+        <h2 className="text-3xl font-bold mb-12 text-green-500">Our Menu Categories</h2>
 
         <div className="grid md:grid-cols-3 gap-10 justify-center">
           {categories.map((cat, index) => (
@@ -47,5 +52,7 @@ export default function Menu() {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

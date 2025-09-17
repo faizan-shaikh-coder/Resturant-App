@@ -2,6 +2,8 @@ import React from 'react'
 import { FaMailBulk, FaPhone } from 'react-icons/fa'
 import { GrMapLocation } from 'react-icons/gr'
 import { useState } from 'react'
+import Navbar from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Contact = () => {
 
@@ -22,11 +24,12 @@ const Contact = () => {
 
   return (
     <>
+    <Navbar/>
       <section className='bg-gray-50 py-20'>
 
         <div className='conatiner max-auto p-6 md:px-12 lg:px-20'>
 
-          <h2 className='text-3xl font-bold text-center mb-10'>Contact Us</h2>
+          <h2 className='text-3xl font-bold text-green-500 text-center mb-10'>Contact Us</h2>
 
           <div className='grid md:grid-cols-2 gap-12'>
             <div>
@@ -80,6 +83,7 @@ const Contact = () => {
         </div>
 
       </section>
+      <Footer/>
     </>
   )
 }
